@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Twitch Without Distraction">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Twitch</title>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="assets/twitch.webp" alt="twitch">
+        </div>
+        <ul class="channel-list">
+            <li class="channel-item">
+                <a href="#" class="channel-link" data-channel="locklear">
+                    <div class="channel-name">Locklear</div>
+                    <div class="channel-status">Gaming</div>
+                </a>
+            </li>
+            <li class="channel-item">
+                <a href="#" class="channel-link" data-channel="kaydop">
+                    <div class="channel-name">Kaydop</div>
+                    <div class="channel-status">Gaming</div>
+                </a>
+            </li>
+            <li class="channel-item">
+                <a href="#" class="channel-link" data-channel="linca">
+                    <div class="channel-name">Linca</div>
+                    <div class="channel-status">Gaming</div>
+                </a>
+            </li>
+            <li class="channel-item">
+                <a href="#" class="channel-link" data-channel="bastiui">
+                    <div class="channel-name">BastiUi</div>
+                    <div class="channel-status">Design</div>
+                </a>
+            </li>
+        </ul>
+    </header>
+    <main>
+        <div class="player-container">
+            <div class="placeholder" id="placeholder">
+                <img src="assets/twitch.webp" alt="twitch">
+                <div>Select a channel</div>
+                <div>Click on a channel in the sidebar to start watching</div>
+            </div>
+            <div class="loading" id="loading">
+                <img src="assets/twitch.webp" alt="twitch">
+                <div>Loading...</div>
+                <div>Connection to the stream in progress</div>
+            </div>
+            <iframe
+                    id="twitch-player"
+                    class="twitch-iframe"
+                    style="display: none;"
+                    allowfullscreen="true"
+                    scrolling="no"
+                    frameborder="0">
+            </iframe>
+        </div>
+    </main>
+    <footer></footer>
+    <script src="scripts/script.js"></script>
+</body>
+</html>

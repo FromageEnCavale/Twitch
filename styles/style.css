@@ -1,0 +1,261 @@
+/* ----- RESET CSS ----- */
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overscroll-behavior: none;
+}
+
+ul[role='list'], ol[role='list'] {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button, input, textarea, select {
+    font: inherit;
+    color: inherit;
+    border: none;
+    background: none;
+    appearance: none;
+}
+
+:focus {
+    outline: none;
+}
+
+:focus:not(:focus-visible) {
+    outline: none;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+input, textarea, select, button {
+    border-radius: 0;
+}
+
+/* ----- COLORS ----- */
+
+:root {
+    --background: #0A0A0A;
+    --text: #F5F5F5;
+    --first: #141414;
+    --second: #1F1F1F;
+    --third: #292929;
+}
+
+/* ----- BODY ----- */
+
+html, body {
+    width: 100%;
+    height: 100%;
+    scrollbar-width: none;
+}
+
+body {
+    display: flex;
+    color: var(--text);
+    background-color: var(--background);
+    font-family: system-ui, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+/* ----- HEADER ----- */
+
+header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 240px;
+    height: 100%;
+    padding: 14px;
+    background-color: var(--first);
+}
+
+.logo-container img {
+    width: 44px;
+    margin: 10px 0 12px 0;
+}
+
+.channel-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.channel-item {
+    list-style: none;
+}
+
+.channel-link {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background-color: var(--second);
+}
+
+.channel-link:hover {
+    background-color: var(--third);
+}
+
+.channel-link.active {
+    background-color: var(--third);
+}
+
+.channel-name {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.channel-status {
+    opacity: 65%;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+/* ----- MAIN ----- */
+
+main {
+    display: flex;
+    flex: 1;
+    height: 100%;
+}
+
+.player-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.twitch-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+}
+
+.placeholder img {
+    width: 44px;
+}
+
+.placeholder > div:nth-child(2) {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.placeholder > div:nth-child(3) {
+    opacity: 65%;
+}
+
+.loading {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+}
+
+.loading.show {
+    display: flex;
+}
+
+.loading img {
+    width: 44px;
+}
+
+.loading > div:nth-child(2) {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.loading > div:nth-child(3) {
+    opacity: 65%;
+}
+
+/* ----- FOOTER ----- */
+
+footer {
+
+}
+
+/* ----- MEDIA QUERY ----- */
+
+/*
+@media (max-width: 1000px) {
+
+    html, body {
+        
+    }
+
+    body {
+        display: none;
+    }
+    
+    header {
+
+    }
+
+    main {
+
+    }
+
+    footer {
+
+    }
+
+}
+
+@media (hover: hover) and (pointer: fine) {
+
+    .ex:hover {
+        background-color: var(--accent);
+    }
+
+}
+
+@media (prefers-color-scheme: light) {
+
+    :root {
+        --background: var(--background-light);
+        --text: var(--text-light);
+        --1: var(--1-light);
+        --2: var(--2-light);
+        --3: var(--3-light);
+        --4: var(--4-light);
+    }
+
+}
+
+@media (prefers-color-scheme: dark) {
+
+    :root {
+        --background: var(--background-dark);
+        --text: var(--text-dark);
+        --1: var(--1-dark);
+        --2: var(--2-dark);
+        --3: var(--3-dark);
+        --4: var(--4-dark);
+    }
+
+}
+*/
